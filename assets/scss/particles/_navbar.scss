@@ -1,0 +1,185 @@
+
+.nav{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 0rem;
+    border-bottom: 2px solid rgba(243, 244, 246, 0.25);
+    
+    &_button {
+        color: #1F2937;
+        text-align: center;
+        font-family: $font;
+        font-size: 1rem;
+        font-weight: 700;
+        line-height: 1.5rem;
+        padding: 1rem 2.00375rem 1rem 1.9375rem;
+        border-radius: 624.9375rem;
+        border: none;
+        opacity: 0.75;
+        background: #FFF;
+        box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.06), 0px 1px 3px 0px rgba(0, 0, 0, 0.10);
+    }
+
+    &_logo {
+        background-image: url('./img/logo\(1\).png');
+        width: 11.42562rem;
+        height: 2.5rem;
+        background-size: cover;
+        @media (max-width: 860px) {
+            scale: 0.72507;
+        }
+    }
+
+    &_link {
+        display: block;
+        padding: 0.5rem 1rem;
+        font-size: $size-md;
+        transition: all 0.1s ease-in-out;
+        &:hover {
+            font-size: 1rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 1.5rem;
+        }
+
+        &:active{
+            font-size: 1rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 1.5rem;
+        }
+    }
+
+    
+
+    &__burger{
+        display: none;
+        width: 24px;
+        height: 24px;
+    }
+
+  }
+
+.burger {
+    display: none;
+    @media (max-width: 860px) {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.navbar__burger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.box {
+    display: none;
+}
+
+.burger_span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: #9D174D;
+}
+
+.navbar__burger__label__block {
+    display: none;
+    @media (max-width:860px) {
+        display: flex;
+    }
+}
+
+.burger_label {
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+    position: relative;
+    left: 24px;
+}
+
+.burger_bottom {
+    margin-bottom: 5px;
+}
+
+.nav_link {
+    @media (max-width:860px) {
+        font-size: 2rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.5rem; 
+        padding-bottom: 1.88rem;
+    }
+}
+
+.nav_link:hover{
+    @media (max-width:860px) {
+        font-size: 2rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 1.5rem; 
+        padding-bottom: 1.88rem;
+    }
+}
+@keyframes fadeOutUp {
+    from {
+        opacity: 1;
+        visibility: visible;
+        transform: translate3d(0, 0, 0);
+    }
+    to {
+        opacity: 0;
+        visibility: hidden;
+        transform: translate3d(0, -2%, 0);
+    }
+}
+
+@keyframes fadeIn {
+    from {opacity: 0; visibility: visible;}
+    to {opacity: 1; visibility: visible;}
+}
+
+.nav_menu {
+    display: flex;
+    align-items: center;
+    @media (max-width:860px) {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        height: 18.125rem;
+        background: rgba(255, 255, 255, 0.10);
+        backdrop-filter: blur(7.5px); 
+        top: 100%;
+        width: 100%;
+        left: -1px;
+        flex-direction: column;
+    }
+}
+
+.nav_link_first{
+    @media (max-width:860px) {
+    padding-top: 2.25rem;
+    }
+}
+
+#myCheckbox:not(:checked) ~ .nav_menu {
+    @media (max-width:860px) {
+        animation: fadeOutUp 0.3s ease-in-out forwards;
+    }
+}
+
+#myCheckbox:checked ~ .nav_menu {
+    @media (max-width:860px) {
+        animation: fadeIn 1s ease-in-out;
+    }
+}
+
+
+
+
